@@ -27,7 +27,6 @@ namespace PluralSightLINQ
             {
                 Console.WriteLine(name);
             }
-            Console.ReadKey();
         }
 
         private static void QueryEmployees()
@@ -49,7 +48,6 @@ namespace PluralSightLINQ
             {
                 Console.WriteLine(e.Name);
             }
-            Console.ReadKey();
         }
     }
 }
