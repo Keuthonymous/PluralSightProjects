@@ -10,21 +10,14 @@ namespace PluralSightLINQ
     {
         static void Main(string[] args)
         {
-            /*First query example
-            string[] instructors = { "Aaron", "Fritz", "Scott", "Keith" };
 
-            IEnumerable<string> query = from s in instructors
-                                        where s.Length == 5
-                                        orderby s descending
-                                        select s;
-            foreach (string name in query)
-            {
-                Console.WriteLine(name);
-            }
-            Console.ReadKey();
-            End of example*/
-            
-            //Second example
+            //QueryEmployees();
+            QueryTypes();
+
+        }
+
+        private static void QueryEmployees()
+        {
             IEnumerable<Employee> employees = new List<Employee>();
             {
                 new Employee { ID = 1, Name = "Scott", HireDate = new DateTime(2002, 3, 5) };
