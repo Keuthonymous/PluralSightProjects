@@ -10,6 +10,7 @@ namespace PluralSightLINQ
     {
         static void Main(string[] args)
         {
+            //First query example
             string[] instructors = { "Aaron", "Fritz", "Scott", "Keith" };
 
             IEnumerable<string> query = from s in instructors
@@ -21,6 +22,7 @@ namespace PluralSightLINQ
                 Console.WriteLine(name);
             }
             Console.ReadKey();
+            //End of example
         }
     }
 }
