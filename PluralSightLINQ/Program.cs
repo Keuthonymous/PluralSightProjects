@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace PluralSightLINQ
 {
@@ -14,6 +15,19 @@ namespace PluralSightLINQ
             //QueryEmployees();
             QueryTypes();
 
+        }
+        private static void QueryTypes()
+        {
+            IEnumerable<string> publicTypes =
+                from t in Assembly.GetExecutingAssembly().GetTypes()
+                where t.IsPublic
+                select t.FullName;
+
+            foreach (string name in publicTypes)
+            {
+                Console.WriteLine(name);
+            }
+            Console.ReadKey();
         }
 
         private static void QueryEmployees()
